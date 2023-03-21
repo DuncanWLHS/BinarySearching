@@ -1,0 +1,13 @@
+Median Method:
+
+ int median;
+   double index;
+   int length = list.size();
+    if (length % 2 == 1) {
+     index = length / 2.0;
+      median = list.get(length / 2);
+      } else {
+         index = length / 2.0 - 0.5;
+        median = (list.get(length / 2 - 1) + list.get(length / 2)) / 2;
+    }
+ return median;
