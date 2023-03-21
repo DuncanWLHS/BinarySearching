@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Main {
+public class BinarySorting {
     public static void main(String[] args) {
         ArrayList<Integer> numList = new ArrayList<>();
         numList.add(5);
