@@ -15,12 +15,12 @@ public class Main {
         Collections.sort(numList);
         System.out.println(numList);
         int location = binarySearch(numList, 25);
-        System.out.println(location);
+        System.out.println("The Index of the target is " + location);
     }
 
-    public static int calculateMedian(ArrayList<Integer> list, int left, int right) {
-        int length = right - left + 1;
-         int median = left + length / 2;
+    public static int calculateMedian(ArrayList<Integer> list, int low, int high) {
+        int length = high - low + 1;
+         int median = low + length / 2;
          if (length % 2 == 0) {
             return (list.get(median) + list.get(median - 1)) / 2;
          } else {
@@ -29,20 +29,20 @@ public class Main {
     }
 
     public static int binarySearch(ArrayList<Integer> list, int target) {
-        int left = 0;
-        int right = list.size() - 1;
+        int low = 0;
+        int high = list.size() - 1;
 
-        while (left <= right) {
+        while (low <= high) {
 
-            int median = list.indexOf(calculateMedian(list, left, right));
+            int median = list.indexOf(calculateMedian(list, low, high)); //median can be found by (low + high) / 2;
 
             if (list.get(median) == target) {
                 return median;
             }
             else if (list.get(median) < target) {
-                left = median + 1;
+                low = median + 1;
             } else {
-                right = median - 1;
+                high = median - 1;
             }
         }
         return -1;
