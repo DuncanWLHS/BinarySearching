@@ -3,12 +3,13 @@ public class SelectionSorting {
     public static void main(String[] args) {
         int[] listToSort = {7, 8, 5, 4, 9, 2};
         System.out.println("Original List");
-        for (int n: listToSort) {
+        for (int n : listToSort) {
             System.out.print(n + " ");
         }
+
         selectionSort((listToSort));
         System.out.println("\nSorted list");
-        for (int n: listToSort) {
+        for (int n : listToSort) {
             System.out.print(n + " ");
         }
     }
